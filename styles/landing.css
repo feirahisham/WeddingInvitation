@@ -1,27 +1,15 @@
-/* Full-page responsive landing */
-.landing {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to bottom right, #6fcde5, #ffd1dc);
-    overflow: hidden;
-}
-
-/* Envelope Design */
+/* Envelope Layout */
 .envelope {
     position: relative;
-    width: 80%; /* Responsive to screen size */
+    width: 80%;
     max-width: 400px;
-    height: auto;
-    aspect-ratio: 2 / 1; /* Maintains proportional height */
+    aspect-ratio: 2 / 1;
     background-color: #6fcde5;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
-/* Envelope Flap */
 .envelope-flap {
     position: absolute;
     top: 0;
@@ -34,12 +22,10 @@
     z-index: 1;
 }
 
-/* Animation: Flap opens */
 .envelope.open .envelope-flap {
     transform: rotateX(-180deg);
 }
 
-/* Envelope Body */
 .envelope-body {
     display: flex;
     flex-direction: column;
@@ -49,16 +35,18 @@
     padding: 20px;
 }
 
-/* Open Button Styling */
 .open-button {
+    width: 90%; /* Ensure the button is wide enough */
+    max-width: 300px; /* Limit width to avoid being too large */
     font-size: 1.5em;
-    padding: 10px 20px;
+    padding: 10px;
     background-color: #ffffff;
     color: #6fcde5;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
+    text-align: center;
+    word-break: break-word; /* Ensure the text wraps if needed */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 

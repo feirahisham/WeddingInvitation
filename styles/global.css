@@ -1,0 +1,39 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-page background setup */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Background gradient that applies to both landing and invitation pages */
+body {
+    background: linear-gradient(to bottom right, #6fcde5, #ffd1dc);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Utility styles (used globally) */
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
