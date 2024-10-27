@@ -1,0 +1,37 @@
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #6fcde5, #ffd1dc);
+}
+
+.envelope {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    background: #6fcde5;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.open-button {
+    margin-top: 40px;
+    font-size: 1.5em;
+    background: #fff;
+    color: #6fcde5;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #333;
+    margin: 10px auto 0;
+    animation: bounce 1.5s infinite;
+}
