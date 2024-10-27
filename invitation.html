@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Majlis Perkahwinan</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/invitation.css">
+    <script src="scripts/dataLoader.js" defer></script>
+</head>
+<body>
+    <div class="container" id="invitationContainer">
+        <div class="header">
+            <h2 class="title">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
+            <h1 class="main-title">Undangan Majlis Perkahwinan</h1>
+            <p class="sub-title">Dengan penuh kesyukuran ke hadrat Allah SWT</p>
+
+            <div class="hosts" id="hostsSection"></div>
+
+            <p class="invitee">
+                <span>Mempersilakan Tuan | Puan | Cik | Dato' | Datuk | Datin</span><br />
+                <span id="receiverName">____________________</span>
+            </p>
+
+            <p class="sub-title">ke walimatul urus anak ke-3 kami</p>
+        </div>
+
+        <div class="couple-names">
+            <h2 id="groomName"></h2>
+            <h2>&</h2>
+            <h2 id="brideName"></h2>
+        </div>
+
+        <div class="details">
+            <p id="eventTime"></p>
+            <p id="eventDate"></p>
+            <p id="islamicDate"></p>
+            <p id="eventVenue"></p>
+        </div>
+
+        <div class="footer">
+            <p class="closing-text">"Moga kehadiran memeriahkan majlis dan diberkati Allah SWT."</p>
+        </div>
+    </div>
+    <audio id="bg-music" src="path-to-music.mp3" loop></audio>
+</body>
+</html>

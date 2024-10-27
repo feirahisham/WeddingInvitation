@@ -1,65 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Majlis Perkahwinan</title>
+    <title>Buka Kad Jemputan</title>
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/landing.css">
-    <link rel="stylesheet" href="styles/invitation.css">
-    <script src="scripts/dataLoader.js" defer></script>
     <script src="scripts/main.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;600&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Landing Page for Traditional Card Experience -->
     <div class="landing">
         <div class="envelope" id="envelope">
             <div class="envelope-flap"></div>
             <div class="envelope-body">
-                <button class="open-button" onclick="openEnvelope()">Buka Kad Jemputan</button>
+                <button class="open-button" onclick="redirectToInvitation()">Buka Kad Jemputan</button>
             </div>
         </div>
     </div>
-
-    <!-- Hidden Invitation Content -->
-    <div class="container hidden">
-        <div class="header">
-            <h2 class="title">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
-            <h1 class="main-title">Undangan Majlis Perkahwinan</h1>
-            <p class="sub-title">Dengan penuh kesyukuran ke hadrat Allah SWT</p>
-
-            <div class="hosts" id="hostsSection"></div>
-
-            <p class="invitee">
-                <span>Mempersilakan Tuan | Puan | Cik | Dato' | Datuk | Datin</span><br />
-                <span class="receiver-name" id="receiverName">____________________</span>
-            </p>
-
-            <p class="sub-title">ke walimatul urus anak ke-3 kami</p>
-        </div>
-
-        <div class="couple-names">
-            <h2 id="groomName"></h2>
-            <h2>&</h2>
-            <h2 id="brideName"></h2>
-        </div>
-
-        <div class="details">
-            <p id="eventTime"></p>
-            <p id="eventDate"></p>
-            <p id="islamicDate"></p>
-            <p id="eventVenue"></p>
-        </div>
-
-        <div class="footer">
-            <p class="closing-text">"Moga kehadiran memeriahkan majlis dan diberkati Allah SWT."</p>
-            <button id="music-control" onclick="toggleMusic()">⏸ Music</button>
-        </div>
-    </div>
-    <audio id="bg-music" src="path-to-music.mp3" loop></audio>
 </body>
-
 </html>
