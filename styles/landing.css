@@ -16,8 +16,10 @@
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    transition: transform 1.5s ease-in-out; /* Transition for the whole envelope */
 }
 
+/* Envelope Flap with slower animation */
 .envelope-flap {
     position: absolute;
     top: 0;
@@ -26,12 +28,14 @@
     height: 50%;
     background-color: #ffffff;
     transform-origin: top;
-    transition: transform 0.6s ease;
+    transition: transform 1.5s ease-in-out; /* Slower, smoother transition */
     z-index: 1;
 }
 
+/* Animation for opening the envelope flap */
 .envelope.open .envelope-flap {
     transform: rotateX(-180deg);
+    transition-delay: 0.3s; /* Delay for more realism */
 }
 
 .envelope-body {
