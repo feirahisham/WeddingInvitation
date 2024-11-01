@@ -9,39 +9,44 @@
     <script src="scripts/dataLoader.js" defer></script>
 </head>
 <body>
-    <div class="container" id="invitationContainer">
-        <div class="header">
-            <h2 class="title">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
-            <h1 class="main-title">Undangan Majlis Perkahwinan</h1>
-            <p class="sub-title">Dengan penuh kesyukuran ke hadrat Allah SWT</p>
+    <!-- Section 1: Host and Invited Name -->
+    <section id="hostsSection" class="section">
+        <h2 class="title">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
+        <h1 class="main-title">Undangan Majlis Perkahwinan</h1>
+        <p class="sub-title">Dengan penuh kesyukuran ke hadrat Allah SWT</p>
+        <div class="hosts"></div>
+        <p class="invitee">
+            <span>Mempersilakan Tuan | Puan | Cik | Dato' | Datuk | Datin</span><br />
+            <span id="receiverName">____________________</span>
+        </p>
+    </section>
 
-            <div class="hosts" id="hostsSection"></div>
-
-            <p class="invitee">
-                <span>Mempersilakan Tuan | Puan | Cik | Dato' | Datuk | Datin</span><br />
-                <span id="receiverName">____________________</span>
-            </p>
-
-            <p class="sub-title">ke walimatul urus anak ke-3 kami</p>
-        </div>
-
+    <!-- Section 2: Bride and Groom Names with Photos -->
+    <section id="coupleSection" class="section">
         <div class="couple-names">
             <h2 id="groomName"></h2>
             <h2>&</h2>
             <h2 id="brideName"></h2>
         </div>
+        <div class="couple-photos">
+            <img src="images/couple-placeholder.jpg" class="couple-photo" alt="Bride and Groom">
+        </div>
+    </section>
 
+    <!-- Section 3: Event Information -->
+    <section id="eventSection" class="section">
         <div class="details">
-            <p id="eventTime"></p>
             <p id="eventDate"></p>
             <p id="islamicDate"></p>
+            <p id="eventTime"></p>
             <p id="eventVenue"></p>
         </div>
+    </section>
 
-        <div class="footer">
-            <p class="closing-text">"Moga kehadiran memeriahkan majlis dan diberkati Allah SWT."</p>
-        </div>
-    </div>
-    <audio id="bg-music" src="path-to-music.mp3" loop></audio>
+    <!-- Sticky Footer with Location Links -->
+    <footer class="sticky-footer">
+        <a href="https://waze.com/ul?q=RUZA%20Agrotech,%20Lunas" target="_blank">Waze</a> |
+        <a href="https://www.google.com/maps/search/?api=1&query=RUZA+Agrotech,+Lunas" target="_blank">Google Maps</a>
+    </footer>
 </body>
 </html>

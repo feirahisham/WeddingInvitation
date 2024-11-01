@@ -1,9 +1,17 @@
-/* Envelope Layout */
+/* Full-page responsive landing */
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #6fcde5, #ffd1dc);
+}
+
+/* Envelope Design */
 .envelope {
     position: relative;
-    width: 80%;
-    max-width: 400px;
-    aspect-ratio: 2 / 1;
+    width: 300px;
+    height: 200px;
     background-color: #6fcde5;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -28,26 +36,23 @@
 
 .envelope-body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
     padding: 20px;
 }
 
+/* Open Button Styling */
 .open-button {
-    width: 90%; /* Ensure the button is wide enough */
-    max-width: 300px; /* Limit width to avoid being too large */
     font-size: 1.5em;
-    padding: 10px;
+    padding: 10px 20px;
     background-color: #ffffff;
     color: #6fcde5;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-align: center;
-    word-break: break-word; /* Ensure the text wraps if needed */
     transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
 }
 
 .open-button:hover {
