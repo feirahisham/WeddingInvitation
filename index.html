@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Envelope Animation Test</title>
+    <title>Kad Jemputan</title>
     <link rel="stylesheet" href="styles/landing.css">
     <script src="scripts/main.js" defer></script>
 </head>
@@ -11,10 +11,13 @@
     <div class="landing">
         <div class="envelope" id="envelope">
             <!-- Envelope flap for animation -->
-            <div class="envelope-flap"></div>
+            <div class="envelope-flap">
+                <!-- Seal button placed inside the flap -->
+                <button class="seal-button" onclick="openEnvelope()">Sila Buka Kad Jemputan</button>
+            </div>
             
-            <!-- Button to trigger the animation -->
-            <button class="seal-button" onclick="openEnvelope()">Open Envelope</button>
+            <!-- Envelope body with color split -->
+            <div class="envelope-body"></div>
         </div>
     </div>
 </body>
