@@ -186,6 +186,32 @@ body, html {
     margin: 10px 0;
 }
 
+/* Event Details Styling */
+.event-details p {
+    font-size: 1.3em;
+    color: #004466;
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* Closing Text Styled as a Quote */
+.closing-text {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #c04848; /* A soft, heartfelt color */
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 2px solid #ffb7b2;
+    text-align: center;
+}
+
+.closing-text p {
+    margin: 0;
+}
+
+
+
+
 /* Butterfly 1 Animation */
 @keyframes fly1 {
     0% { transform: translate(0, 0) rotate(0deg); }
