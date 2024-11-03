@@ -23,16 +23,14 @@ body, html {
     justify-content: center;
     align-items: center;
     padding: 20px;
-}
-
-.host-section, .couple-section, .event-section {
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid transparent;
+    border-image: linear-gradient(to right, #ff9aa2, #ffb7b2, #ffcad4);
+    border-image-slice: 1;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     margin: 20px;
 }
 
+/* Title and Subtitle */
 .main-title {
     font-size: 2.5em;
     color: #c04848;
@@ -118,4 +116,14 @@ body, html {
     color: #777;
     font-size: 1.2em;
     margin-top: 20px;
+}
+
+/* Butterfly Animation */
+.butterfly {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
 }

@@ -6,9 +6,14 @@
     <title>Kad Jemputan Perkahwinan</title>
     <link rel="stylesheet" href="styles/invitation.css">
     <script src="scripts/dataLoader.js" defer></script>
+    <script src="scripts/butterflyAnimation.js" defer></script> <!-- New JS file for random paths -->
 </head>
 <body>
-    <!-- Section 1: Hosts -->
+    <!-- Only Two Butterflies with Random Paths -->
+    <div class="butterfly" id="butterfly1" style="background-image: url('/images/butterfly1.png');"></div>
+    <div class="butterfly" id="butterfly2" style="background-image: url('/images/butterfly2.png');"></div>
+
+    <!-- Invitation Content -->
     <section class="section host-section">
         <h1 class="main-title">Undangan Majlis Perkahwinan</h1>
         <p class="subtitle">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
@@ -31,7 +36,6 @@
         </div>
     </section>
 
-    <!-- Section 2: Invitee Titles and Couple Names with Pictures -->
     <section class="section couple-section">
         <p class="invitee-titles">Tuan | Puan | Dato' | Datin | Cik</p>
         <h2 class="couple-intro">Dengan penuh kasih sayang, kami menjemput Tuan/Puan ke majlis perkahwinan anak kami:</h2>
@@ -46,7 +50,6 @@
         </div>
     </section>
 
-    <!-- Section 3: Event Details -->
     <section class="section event-section">
         <div class="event-details">
             <p class="date"></p>
