@@ -46,3 +46,18 @@ fetch('data/weddingInfo.json')
         }
     });
     
+
+
+    function toggleMusic() {
+        const music = document.getElementById("background-music");
+        const button = document.getElementById("music-toggle");
+        
+        if (music.paused) {
+            music.play();
+            button.textContent = "🔊 Pause Music";
+        } else {
+            music.pause();
+            button.textContent = "🔇 Play Music";
+        }
+    }
+    

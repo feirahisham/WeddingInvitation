@@ -18,6 +18,26 @@ body, html {
     overflow-x: hidden;
 }
 
+/* Music Control Button Styling */
+#music-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    font-size: 1em;
+    background-color: #ffcad4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#music-toggle:hover {
+    background-color: #c04848;
+    color: #fff;
+}
+
+
 /* Section Styling with Borders */
 .section {
     width: 90vw;

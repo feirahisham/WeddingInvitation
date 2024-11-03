@@ -11,7 +11,17 @@
 <body>
     <!-- Only Two Butterflies with Random Paths -->
     <div class="butterfly" id="butterfly1" style="background-image: url('/images/butterfly1.png'); top: 20%; left: 10%;"></div>
-    <div class="butterfly" id="butterfly2" style="background-image: url('/images/butterfly2.png'); top: 70%; left: 60%;"></div>    
+    <div class="butterfly" id="butterfly2" style="background-image: url('/images/butterfly2.png'); top: 70%; left: 60%;"></div>
+    
+    <!-- Background Music -->
+    <audio id="background-music" autoplay loop>
+        <source src="/musics/ITLO.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Controls Button -->
+    <button id="music-toggle" onclick="toggleMusic()">🔊 Pause Music</button>
+
 
     <!-- Invitation Content -->
     <!-- Host Section - Full Width and Clear Vertical Spacing -->
@@ -78,13 +88,13 @@
         
         <!-- Closing Text as a Quotation -->
         <div class="closing-text">
-            <p>"Moga kehadiran Tuan/Puan/Dato'/Datin/Cik/Encik memeriahkan majlis dan diberkati Allah SWT."</p>
+            <p>"Moga kehadiran<br/>Tuan/Puan/Dato'/Datin/Cik/Encik<br/>memeriahkan majlis dan diberkati Allah SWT."</p>
         </div>
     </section>
 
     <!-- Sticky Footer for Location Links -->
     <footer class="sticky-footer">
-        <p>📍 Find us here: 
+        <p>📍  Lokasi:
             <a href="https://waze.com/ul?ll=5.418794966719676,100.53729100537126&navigate=yes" target="_blank">Waze</a> |
             <a href="https://www.google.com/maps/search/?api=1&query=5.418794966719676,100.53729100537126" target="_blank">Google Maps</a>
         </p>
