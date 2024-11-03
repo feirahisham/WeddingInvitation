@@ -33,3 +33,16 @@ fetch('data/weddingInfo.json')
         });
     })
     .catch(error => console.error('Error loading wedding info:', error));
+
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const receiverName = urlParams.get("name");
+    
+        if (receiverName) {
+            document.getElementById("receiverName").textContent = receiverName;
+        }
+    });
+    

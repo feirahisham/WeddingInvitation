@@ -1,70 +1,70 @@
-/* Full-page responsive landing */
-body, html {
+/* Reset and global styles */
+* {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    box-sizing: border-box;
 }
 
-.landing {
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Cormorant Garamond', serif;
+    background: linear-gradient(to bottom right, #6fcde5, #ffd1dc);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(to bottom right, #6fcde5, #ffd1dc);
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 
-/* Standard Envelope Design */
+/* Fade-out animation */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+/* Envelope and Seal Button Styling */
 .envelope {
     position: relative;
     width: 300px;
     height: 200px;
-    background-color: #6fcde5;
+    background-color: #fff;
     border-radius: 10px;
-    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Envelope Flap with Rotation Animation */
 .envelope-flap {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 50%;
-    background-color: #ffffff;
-    transform-origin: top; /* Rotate from the top to open upward */
-    transition: transform 1.5s ease-in-out;
-    z-index: 1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow for envelope effect */
+    height: 100px;
+    background-color: #6fcde5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: top;
+    transition: transform 0.8s ease;
 }
 
-/* Rotate flap upward when 'open' class is added */
 .envelope.open .envelope-flap {
     transform: rotateX(-180deg);
 }
 
-/* Seal Button Positioned at the Boundary */
 .seal-button {
     position: absolute;
-    top: 100%; /* Position at the bottom edge of the flap */
+    top: 60px;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the button at the boundary */
+    transform: translateX(-50%);
+    font-size: 1.2em;
+    background-color: #c04848;
+    color: #fff;
     padding: 10px 20px;
-    background-color: #8b0000;
-    color: #ffffff;
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds slight shadow for depth */
-    z-index: 2; /* Ensure seal button is in front of the flap */
-}
-
-/* Hide flap and seal button when 'hidden' class is added */
-.hidden {
-    opacity: 0;
-    transition: opacity 0.5s ease; /* Smooth fade-out */
-    pointer-events: none; /* Disable interactions */
 }

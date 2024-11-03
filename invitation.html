@@ -10,43 +10,60 @@
 </head>
 <body>
     <!-- Only Two Butterflies with Random Paths -->
-    <div class="butterfly" id="butterfly1" style="background-image: url('/images/butterfly1.png');"></div>
-    <div class="butterfly" id="butterfly2" style="background-image: url('/images/butterfly2.png');"></div>
+    <div class="butterfly" id="butterfly1" style="background-image: url('/images/butterfly1.png'); top: 20%; left: 10%;"></div>
+    <div class="butterfly" id="butterfly2" style="background-image: url('/images/butterfly2.png'); top: 70%; left: 60%;"></div>    
 
     <!-- Invitation Content -->
+    <!-- Host Section - Full Width and Clear Vertical Spacing -->
     <section class="section host-section">
         <h1 class="main-title">Undangan Majlis Perkahwinan</h1>
         <p class="subtitle">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
         <p class="intro">Dengan penuh kesyukuran ke hadrat Allah SWT, kami...</p>
+        
+        <!-- Host Information with "&" between hosts -->
         <div class="host-info">
             <div class="hosts">
                 <div class="host" id="host-1">
                     <img src="" alt="Host 1" class="host-photo">
                     <p class="host-name"></p>
                 </div>
+                <p class="and-symbol">&</p> <!-- Add this line for the "&" symbol -->
                 <div class="host" id="host-2">
                     <img src="" alt="Host 2" class="host-photo">
                     <p class="host-name"></p>
                 </div>
             </div>
         </div>
+        
+        <!-- Co-hosts Section -->
         <div class="co-host-info">
             <h2 class="section-title">Turut mengundang:</h2>
             <ul class="co-hosts"></ul>
         </div>
     </section>
-
+    
+    <!-- Couple Section -->
     <section class="section couple-section">
-        <p class="invitee-titles">Tuan | Puan | Dato' | Datin | Cik</p>
-        <h2 class="couple-intro">Dengan penuh kasih sayang, kami menjemput Tuan/Puan ke majlis perkahwinan anak kami:</h2>
-        <div class="couple-photos">
-            <img src="" alt="Groom" class="groom-photo">
-            <img src="" alt="Bride" class="bride-photo">
-        </div>
-        <div class="couple-names">
-            <h2 class="groom"></h2>
-            <p>&</p>
-            <h2 class="bride"></h2>
+        <p class="couple-intro">
+            Dengan penuh kasih sayang, kami menjemput
+        </p>
+        <p class="invitee-titles">Tuan/Puan/Dato'/Datin/Cik/Encik</p>
+        <p class="invitee-name" id="receiverName">_______________</p> <!-- Placeholder for invitee name -->
+        <p class="couple-intro">
+            ke majlis perkahwinan anak ke-3 kami
+        </p>
+        
+        <!-- Couple Photos and Names Aligned with Heart Symbol Centered -->
+        <div class="couple-vertical">
+            <div class="couple-info">
+                <img src="/images/FQ.jpeg" alt="Groom" class="groom-photo">
+                <h2 class="groom"></h2>
+            </div>
+            <p class="heart-symbol">❤️</p>
+            <div class="couple-info">
+                <h2 class="bride"></h2>
+                <img src="/images/FT.jpeg" alt="Bride" class="bride-photo">
+            </div>
         </div>
     </section>
 

@@ -15,48 +15,74 @@ body, html {
     overflow-x: hidden;
 }
 
-/* Section styles */
+/* Section Styling with Borders */
 .section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border: 3px solid transparent;
+    width: 90vw;
+    max-width: 1200px;
+    min-height: 100vh; /* Full viewport height */
+    padding: 40px 20px;
+    text-align: center;
+    border: 5px solid transparent;
     border-image: linear-gradient(to right, #ff9aa2, #ffb7b2, #ffcad4);
     border-image-slice: 1;
     border-radius: 15px;
-    margin: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* Title and Subtitle */
+/* Main Title and Host Info - Largest and Most Prominent */
 .main-title {
-    font-size: 2.5em;
+    font-size: 2.8em;
     color: #c04848;
     margin-bottom: 10px;
 }
 
+.host-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Subtitle (Arabic Text) and Section Title */
 .subtitle {
     font-size: 1.8em;
-    color: #6fcde5;
+    color: #004466;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .section-title {
     font-size: 1.5em;
-    margin-top: 20px;
+    color: #333;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* Host and Co-Host Sections */
-.co-host-info {
+/* Intro - Smaller than Main Title but Larger than Body Text */
+.intro {
+    font-size: 1.4em;
+    color: #333;
     margin-bottom: 20px;
 }
 
+/* Vertical Spacing for Clear Separation */
+.section h1.main-title,
+.section p.subtitle,
+.section p.intro,
+.section .hosts,
+.section .co-host-info {
+    margin-bottom: 20px;
+}
+
+/* Host Information Styling */
 .hosts {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
 }
 
 .host-photo {
@@ -66,25 +92,68 @@ body, html {
     border: 3px solid #6fcde5;
 }
 
+/* Co-host Styling - Smaller and Subtle */
+.co-host-info h2.section-title {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
 .co-hosts {
     list-style: none;
     padding: 0;
-    margin-top: 10px;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #555;
 }
 
 /* Couple Section */
-.couple-names {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+.couple-section {
+    text-align: center;
 }
 
-.couple-photos {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+/* Styling for couple-intro text */
+.couple-intro {
+    font-size: 1.3em;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Invitee Name Styling */
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap');
+
+/* Styling for Invitee Titles */
+.invitee-titles {
+    font-family: 'Cormorant Garamond', serif; /* Distinct font for titles */
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #555;
+    margin-top: 15px;
     margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+
+/* Invitee Name Styling */
+.invitee-name {
+    font-family: 'Charmonman', cursive;
+    font-size: 1.8em;
+    color: #c04848;
+    margin: 10px 0;
+}
+
+
+/* Vertical Arrangement for Groom, Heart, and Bride */
+.couple-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.couple-info {
+    text-align: center;
 }
 
 .groom-photo, .bride-photo {
@@ -94,31 +163,49 @@ body, html {
     border: 3px solid #6fcde5;
 }
 
+/* Groom and Bride Name Styling for Consistent Spacing */
 .groom, .bride {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #4a4a4a;
+    margin-top: 10px; /* Ensures equal spacing between photo and name */
+    margin-bottom: 10px; /* Adds consistent spacing beneath the name */
 }
 
-/* Invitee Titles */
-.invitee-titles {
-    font-size: 1.3em;
-    margin-bottom: 10px;
+
+/* Heart Symbol Styling */
+.heart-symbol {
+    font-size: 2em; /* Slightly larger for emphasis */
+    color: #c04848; /* Romantic red color */
+    margin: 10px 0;
 }
 
-/* Event Details */
-.event-details p {
-    font-size: 1.3em;
-    color: #6fcde5;
+/* Butterfly 1 Animation */
+@keyframes fly1 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(100px, -80px) rotate(30deg); }
+    50% { transform: translate(-80px, 100px) rotate(-15deg); }
+    75% { transform: translate(120px, -90px) rotate(20deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
 }
 
-.closing-text {
-    font-style: italic;
-    color: #777;
-    font-size: 1.2em;
-    margin-top: 20px;
+/* Butterfly 2 Animation */
+@keyframes fly2 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-120px, 60px) rotate(-30deg); }
+    50% { transform: translate(100px, -90px) rotate(20deg); }
+    75% { transform: translate(-90px, 110px) rotate(-25deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
 }
 
-/* Butterfly Animation */
+/* Apply Animations to Butterflies */
+#butterfly1 {
+    animation: fly1 12s ease-in-out infinite;
+}
+
+#butterfly2 {
+    animation: fly2 20s ease-in-out infinite;
+}
+
 .butterfly {
     position: absolute;
     width: 30px;
