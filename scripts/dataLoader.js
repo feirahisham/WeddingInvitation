@@ -34,30 +34,30 @@ fetch('data/weddingInfo.json')
     })
     .catch(error => console.error('Error loading wedding info:', error));
 
+// Display invitee name from URL or default to "Yang Di Hormati"
+document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const receiverName = urlParams.get("name");
 
-
-
-    document.addEventListener("DOMContentLoaded", () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const receiverName = urlParams.get("name");
-    
-        if (receiverName) {
-            document.getElementById("receiverName").textContent = receiverName;
-        }
-    });
-    
-
-
-    function toggleMusic() {
-        const music = document.getElementById("background-music");
-        const button = document.getElementById("music-toggle");
-        
-        if (music.paused) {
-            music.play();
-            button.textContent = "🔊 Pause Music";
-        } else {
-            music.pause();
-            button.textContent = "🔇 Play Music";
-        }
+    // Set the invitee name or default to "Yang Di Hormati"
+    const inviteeElement = document.getElementById("receiverName");
+    if (inviteeElement) {
+        inviteeElement.textContent = receiverName || "Yang Di Hormati";
+    } else {
+        console.error("Invitee element with ID 'receiverName' not found.");
     }
+});
+
+// Toggle background music play/pause
+function toggleMusic() {
+    const music = document.getElementById("background-music");
+    const button = document.getElementById("music-toggle");
     
+    if (music.paused) {
+        music.play();
+        button.textContent = "🔊 Pause Music";
+    } else {
+        music.pause();
+        button.textContent = "🔇 Play Music";
+    }
+}

@@ -1,19 +1,25 @@
-// Function to animate the envelope flap and quickly redirect
-function openEnvelope() {
-    const envelope = document.getElementById('envelope');
-    const flap = document.querySelector('.envelope-flap');
-    const sealButton = document.querySelector('.seal-button');
+document.addEventListener("DOMContentLoaded", () => {
+    const envelope = document.querySelector(".envelope");
+    const sealButton = document.querySelector(".seal-button");
 
-    envelope.classList.add('open'); // Add 'open' class to trigger flap animation
+    if (envelope && sealButton) {
+        window.openEnvelope = function() {
+            envelope.classList.add("open");
+            sealButton.classList.add("fade-out");
 
-    // Hide flap and seal button after animation, then redirect
-    setTimeout(() => {
-        flap.classList.add('hidden');
-        sealButton.classList.add('hidden');
+            // Get the 'name' parameter from the current URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const receiverName = urlParams.get("name");
 
-        // Redirect immediately after hiding the elements
-        const urlParams = new URLSearchParams(window.location.search);
-        const name = urlParams.get('name') || 'Tetamu yang Dihormati';
-        window.location.href = `invitation.html?name=${encodeURIComponent(name)}`;
-    }, 1500); // Matches the animation duration
-}
+            // Build the redirection URL, including the 'name' parameter if it exists
+            const redirectUrl = receiverName ? `invitation.html?name=${encodeURIComponent(receiverName)}` : 'invitation.html';
+
+            // Delay to allow the animation to play before redirecting
+            setTimeout(() => {
+                window.location.href = redirectUrl;
+            }, 1000);
+        };
+    } else {
+        console.error("Envelope or seal button not found.");
+    }
+});

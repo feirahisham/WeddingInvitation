@@ -6,29 +6,21 @@
     <title>Kad Jemputan</title>
     <link rel="stylesheet" href="styles/landing.css">
     <script src="scripts/main.js" defer></script>
-    <script defer>
-        function openEnvelope() {
-            // Add fade-out effect to the body
-            document.body.classList.add('fade-out');
-            
-            // Redirect to invitation.html after the fade-out duration
-            setTimeout(() => {
-                window.location.href = 'invitation.html';
-            }, 1000); // 1 second delay to match the fade-out animation
-        }
-    </script>
 </head>
 <body>
     <div class="landing">
-        <div class="envelope" id="envelope">
-            <!-- Envelope flap for animation -->
-            <div class="envelope-flap">
-                <!-- Seal button placed inside the flap -->
-                <button class="seal-button" onclick="openEnvelope()">F & F</button>
-            </div>
-            
-            <!-- Envelope body with color split -->
+        <div class="envelope">
+            <!-- White envelope body with shadow effect -->
             <div class="envelope-body"></div>
+
+            <!-- Seal button centered on the envelope body -->
+            <button class="seal-button" onclick="openEnvelope()">
+                <img src="/images/FQFT_.png" alt="Seal">
+            </button>
+            
+
+            <!-- Envelope flap for animation -->
+            <div class="envelope-flap"></div>
         </div>
     </div>
 </body>
