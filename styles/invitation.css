@@ -1,3 +1,6 @@
+/* Invitee Name Styling */
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap');
+
 /* Reset and global styles */
 * {
     margin: 0;
@@ -119,9 +122,6 @@ body, html {
     margin: 10px 0;
 }
 
-/* Invitee Name Styling */
-@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap');
-
 /* Styling for Invitee Titles */
 .invitee-titles {
     font-family: 'Cormorant Garamond', serif; /* Distinct font for titles */
@@ -140,6 +140,13 @@ body, html {
     font-size: 1.8em;
     color: #c04848;
     margin: 10px 0;
+}
+
+/* Styling for "dan keluarga" */
+.invitee-family {
+    font-size: 1em;
+    color: #555;
+    margin-top: -5px; /* Slight adjustment to bring it closer to the invitee name */
 }
 
 
