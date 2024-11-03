@@ -210,6 +210,43 @@ body, html {
 }
 
 
+/* Enhanced Sticky Footer */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to right, #6fcde5, #ffd1dc); /* Subtle gradient matching the main background */
+    text-align: center;
+    padding: 12px 0;
+    font-size: 1.2em;
+    color: #004466; /* Matches event-details for consistency */
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15); /* Slight shadow for elevation */
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.sticky-footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.sticky-footer a {
+    color: #004466;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 4px 8px;
+    background-color: #ffcad4;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sticky-footer a:hover {
+    background-color: #c04848; /* Darker shade on hover */
+    color: #fff;
+}
+
+
 
 
 /* Butterfly 1 Animation */
