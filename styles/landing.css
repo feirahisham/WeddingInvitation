@@ -9,7 +9,7 @@ body, html {
     width: 100%;
     height: 100%;
     font-family: 'Aubrey', sans-serif;
-    background: linear-gradient(to bottom right, #6fcde5, #ffd1dc);
+    background: linear-gradient(to bottom right, #6fcde5, #b284be);
     display: flex;
     justify-content: center;
     align-items: center;
