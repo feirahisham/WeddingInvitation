@@ -35,18 +35,43 @@ fetch('data/weddingInfo.json')
     .catch(error => console.error('Error loading wedding info:', error));
 
 // Display invitee name from URL or default to "Yang Di Hormati"
-document.addEventListener("DOMContentLoaded", () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const receiverName = urlParams.get("name");
+// document.addEventListener("DOMContentLoaded", () => {
+//     const urlParams = new URLSearchParams(window.location.search);
+//     const receiverName = urlParams.get("name");
 
-    // Set the invitee name or default to "Yang Di Hormati"
-    const inviteeElement = document.getElementById("receiverName");
-    if (inviteeElement) {
-        inviteeElement.textContent = receiverName || "Yang Di Hormati";
+//     // Set the invitee name or default to "Yang Di Hormati"
+//     const inviteeElement = document.getElementById("receiverName");
+//     if (inviteeElement) {
+//         inviteeElement.textContent = receiverName || "Yang Di Hormati";
+//     } else {
+//         console.error("Invitee element with ID 'receiverName' not found.");
+//     }
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Get the ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const inviteeId = urlParams.get("id");
+
+    // Fetch invitee information using the ID
+    if (inviteeId) {
+        fetch(`https://feirahisham.com/scripts/fetch_invitee.php?id=${inviteeId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.name) {
+                    // Display the invitee's name
+                    document.getElementById("receiverName").textContent = data.name;
+                } else {
+                    console.error("Invitee not found.");
+                    document.getElementById("receiverName").textContent = "Yang Di Hormati";
+                }
+            })
+            .catch(error => console.error("Error fetching invitee data:", error));
     } else {
-        console.error("Invitee element with ID 'receiverName' not found.");
+        document.getElementById("receiverName").textContent = "Yang Di Hormati";
     }
 });
+
 
 // Toggle background music play/pause
 function toggleMusic() {

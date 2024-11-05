@@ -6,13 +6,22 @@ document.addEventListener("DOMContentLoaded", () => {
     function openEnvelope() {
         document.removeEventListener("click", openEnvelope); // Remove event listener after opening
 
-        // Get the 'name' parameter from the current URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const receiverName = urlParams.get("name");
+        // // Get the 'name' parameter from the current URL
+        // const urlParams = new URLSearchParams(window.location.search);
+        // const receiverName = urlParams.get("name");
 
-        // Construct the redirect URL with the 'name' parameter if it exists
-        const redirectUrl = receiverName 
-            ? `invitation.html?name=${encodeURIComponent(receiverName)}` 
+        // // Construct the redirect URL with the 'name' parameter if it exists
+        // const redirectUrl = receiverName 
+        //     ? `invitation.html?name=${encodeURIComponent(receiverName)}` 
+        //     : 'invitation.html';
+
+        // Get the 'id' parameter from the current URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const inviteeId = urlParams.get("id");
+
+        // Construct the redirect URL with the 'id' parameter if it exists
+        const redirectUrl = inviteeId 
+            ? `invitation.html?id=${encodeURIComponent(inviteeId)}` 
             : 'invitation.html';
 
         // Trigger animation and redirect after delay
